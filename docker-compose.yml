@@ -1,0 +1,16 @@
+version: '3.3'
+services:
+  prex-db:
+    image: mysql:latest
+    restart: always
+    container_name: db_local_prex_challenge
+    environment:
+      MYSQL_DATABASE: 'prex-challenge'
+      MYSQL_USER: 'prexchallenge'
+      MYSQL_PASSWORD: 'prexchallenge'
+      MYSQL_ROOT_PASSWORD: 'prexchallenge'
+    ports:
+      # Public port : Private port
+      - "3306:3306"
+    volumes:
+      - /path/on/host:/path/in/container
