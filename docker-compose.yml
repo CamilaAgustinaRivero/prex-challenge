@@ -13,4 +13,4 @@ services:
       # Public port : Private port
       - "3306:3306"
     volumes:
-      - /path/on/host:/path/in/container
+      - ./my.cnf:/etc/mysql/my.cnf
